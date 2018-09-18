@@ -20,23 +20,12 @@ public class ShopEndPoint {
     	
     	Integer mallId = Integer.valueOf(msg.getPayload());
     	List<Shop> shopList = shopService.getActiveShopListByMallId(mallId);
-    	
-    	if (shopList.isEmpty()) {
-    		return MessageBuilder.fromMessage(msg)
-    				.copyHeadersIfAbsent(msg.getHeaders())
-    				.setHeader(STATUSCODE_HEADER, HttpStatus.NOT_FOUND)
-    				.build();
-    	}
-    	else {
-    		
-    		ShopList result = new ShopList(shopList);
-    		return MessageBuilder.withPayload(shopList)
-    				.copyHeadersIfAbsent(msg.getHeaders())
-    				.setHeader(STATUSCODE_HEADER, HttpStatus.OK)
-    				.build();
-    		
-    	}
-        
+    	    	  		
+    	ShopList result = new ShopList(shopList);
+    	return MessageBuilder.withPayload(shopList)
+    			.copyHeadersIfAbsent(msg.getHeaders())
+    			.setHeader(STATUSCODE_HEADER, HttpStatus.OK)
+    			.build();    		           
     }
     
     public void setShopService(ShopService shopService) {

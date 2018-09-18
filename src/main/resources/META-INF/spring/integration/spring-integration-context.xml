@@ -46,9 +46,9 @@
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/lms_dev?useUnicode=yes&amp;characterEncoding=UTF-8"/>
-		<property name="username" value="lms_test"/>
-		<property name="password" value="xOUAM8Z2I3c0BZbu"/>
+		<property name="url" value="jdbc:mysql://shkazghmysql-uat.mysql.database.azure.com:3306/shkpmalls_lms"/>
+		<property name="username" value="shkpmalls_lms_user@shkazghmysql-uat"/>
+		<property name="password" value="shkpmalls_lms_pwd"/>
 	</bean>
 	
 	<bean id="shopMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
