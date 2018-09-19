@@ -46,9 +46,14 @@
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://shkazghmysql-uat.mysql.database.azure.com:3306/shkpmalls_lms"/>
+		<property name="url" value="jdbc:mysql://shkazghmysql-uat.mysql.database.azure.com:3306/shkpmalls_lms?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true"/>
 		<property name="username" value="shkpmalls_lms_user@shkazghmysql-uat"/>
 		<property name="password" value="shkpmalls_lms_pwd"/>
+		<property name="validationQuery" value="select 1"/>
+		<property name="testWhileIdle" value="true"/>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+		<property name="minEvictableIdleTimeMillis" value="18000000"/>
+		<property name="testOnBorrow" value="true"/>		
 	</bean>
 	
 	<bean id="shopMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
