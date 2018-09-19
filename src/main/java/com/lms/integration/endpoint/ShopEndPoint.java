@@ -22,7 +22,7 @@ public class ShopEndPoint {
     	List<Shop> shopList = shopService.getActiveShopListByMallId(mallId);
     	    	  		
     	ShopList result = new ShopList(shopList);
-    	return MessageBuilder.withPayload(shopList)
+    	return MessageBuilder.withPayload(result)
     			.copyHeadersIfAbsent(msg.getHeaders())
     			.setHeader(STATUSCODE_HEADER, HttpStatus.OK)
     			.build();    		           

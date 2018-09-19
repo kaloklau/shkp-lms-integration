@@ -8,7 +8,7 @@ public class ShopList implements Serializable {
 
     private List<Shop> shopInfo;
 
-    public ShopList(List<Shop> shop) {
+    public ShopList(List<Shop> shopInfo) {
     	
     	this.shopInfo = shopInfo;
     }
