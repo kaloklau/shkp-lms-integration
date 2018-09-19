@@ -1,58 +1,93 @@
-<%@ include file="/WEB-INF/views/includes/taglibs.jsp"%>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Spring Integration Template</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="">
+<!-- saved from url=(0068)http://design2.me.hk/shkp-lms-frontend/backend/html/gift-create.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <title>The page you're looking for could not be found (404)</title>
+  <style>
+    body {
+      color: #666;
+      text-align: center;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: auto;
+      font-size: 14px;
+    }
 
-		<!-- Le styles -->
-		<link href="<c:url value='/wro/g1.css'/>" rel="stylesheet">
+    h1 {
+      font-size: 56px;
+      line-height: 100px;
+      font-weight: 400;
+      color: #456;
+    }
 
-		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+    h2 {
+      font-size: 24px;
+      color: #666;
+      line-height: 1.5em;
+    }
 
-		<!-- Le fav and touch icons -->
-		<link rel="shortcut icon" href="<c:url value='/assets/ico/favicon.ico'/>">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value='/assets/ico/apple-touch-icon-144-precomposed.png'/>">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<c:url value='/assets/ico/apple-touch-icon-114-precomposed.png'/>">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<c:url value='/assets/ico/apple-touch-icon-72-precomposed.png'/>">
-		<link rel="apple-touch-icon-precomposed" href="<c:url value='/assets/ico/apple-touch-icon-57-precomposed.png'/>">
-	</head>
+    h3 {
+      color: #456;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+    }
 
-	<body>
+    hr {
+      max-width: 800px;
+      margin: 18px auto;
+      border: 0;
+      border-top: 1px solid #EEE;
+      border-bottom: 1px solid white;
+    }
 
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="#">Twitter Template</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li class="active"><a href='<c:url value="/"/>'>Home</a></li>
-						</ul>
-					</div><!--/.nav-collapse -->
-				</div>
-			</div>
-		</div>
+    img {
+      max-width: 40vw;
+      display: block;
+      margin: 40px auto;
+    }
 
-		<div class="container">
-			<div class="page-header">
-				<h1>Unresolved View!</h1>
-			</div>
-			<p>
-				We were unable to render the requested view. Other representations
-				of the data may however exist.
-			</p>
+    a {
+      line-height: 100px;
+      font-weight: 400;
+      color: #4A8BEE;
+      font-size: 18px;
+      text-decoration: none;
+    }
 
-		</div> <!-- /container -->
-	</body>
-</html>
+    .container {
+      margin: auto 20px;
+    }
+
+    .go-back {
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEwIiBoZWlnaHQ9IjIxMCIgdmlld0JveD0iMCAwIDIxMCAyMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEwNS4wNjE0IDIwMy42NTVsMzguNjQtMTE4LjkyMWgtNzcuMjhsMzguNjQgMTE4LjkyMXoiIGZpbGw9IiNlMjQzMjkiLz4KICA8cGF0aCBkPSJNMTA1LjA2MTQgMjAzLjY1NDhsLTM4LjY0LTExOC45MjFoLTU0LjE1M2w5Mi43OTMgMTE4LjkyMXoiIGZpbGw9IiNmYzZkMjYiLz4KICA8cGF0aCBkPSJNMTIuMjY4NSA4NC43MzQxbC0xMS43NDIgMzYuMTM5Yy0xLjA3MSAzLjI5Ni4xMDIgNi45MDcgMi45MDYgOC45NDRsMTAxLjYyOSA3My44MzgtOTIuNzkzLTExOC45MjF6IiBmaWxsPSIjZmNhMzI2Ii8+CiAgPHBhdGggZD0iTTEyLjI2ODUgODQuNzM0Mmg1NC4xNTNsLTIzLjI3My03MS42MjVjLTEuMTk3LTMuNjg2LTYuNDExLTMuNjg1LTcuNjA4IDBsLTIzLjI3MiA3MS42MjV6IiBmaWxsPSIjZTI0MzI5Ii8+CiAgPHBhdGggZD0iTTEwNS4wNjE0IDIwMy42NTQ4bDM4LjY0LTExOC45MjFoNTQuMTUzbC05Mi43OTMgMTE4LjkyMXoiIGZpbGw9IiNmYzZkMjYiLz4KICA8cGF0aCBkPSJNMTk3Ljg1NDQgODQuNzM0MWwxMS43NDIgMzYuMTM5YzEuMDcxIDMuMjk2LS4xMDIgNi45MDctMi45MDYgOC45NDRsLTEwMS42MjkgNzMuODM4IDkyLjc5My0xMTguOTIxeiIgZmlsbD0iI2ZjYTMyNiIvPgogIDxwYXRoIGQ9Ik0xOTcuODU0NCA4NC43MzQyaC01NC4xNTNsMjMuMjczLTcxLjYyNWMxLjE5Ny0zLjY4NiA2LjQxMS0zLjY4NSA3LjYwOCAwbDIzLjI3MiA3MS42MjV6IiBmaWxsPSIjZTI0MzI5Ii8+Cjwvc3ZnPgo=" alt="GitLab Logo">
+  <h1>
+    404
+  </h1>
+  <div class="container">
+    <h3>The page you're looking for could not be found.</h3>
+    <hr>
+    <p>The resource that you are attempting to access does not exist or you don't have the necessary permissions to view it.</p>
+     <p>Make sure the address is correct and that the page hasn't moved.</p>
+     <p>Please contact your GitLab administrator if you think this is a mistake.</p>
+    <a href="javascript:history.back()" class="js-go-back go-back" style="display: inline;">Go back</a>
+  </div>
+  <script>
+    (function () {
+      var goBack = document.querySelector('.js-go-back');
+
+      if (history.length > 1) {
+        goBack.style.display = 'inline';
+      }
+    })();
+  </script>
+
+
+
+</body></html>
