@@ -6,22 +6,22 @@ import java.util.List;
 
 public class ShopList implements Serializable {
 
-    private List<Shop> shop;
+    private List<Shop> shopInfo;
 
     public ShopList(List<Shop> shop) {
     	
-    	this.shop = shop;
+    	this.shopInfo = shopInfo;
     }
     
-    public List<Shop> getShop() {
+    public List<Shop> getShopInfo() {
 
-        if (shop == null) {
-            shop = new ArrayList<>();
+        if (shopInfo == null) {
+            shopInfo = new ArrayList<>();
         }
-        return shop;
+        return shopInfo;
     }
     
-    public void setShop(List<Shop> shop) {
-    	this.shop = shop;
+    public void setShopInfo(List<Shop> shopInfo) {
+    	this.shopInfo = shopInfo;
     }
 }
