@@ -24,6 +24,7 @@
         path="/api/v1/shop/{mallId}/list" 
         payload-expression="#pathVariables.mallId">
         <int-http:request-mapping consumes="application/json" produces="application/json"/>
+        <int-http:header name="apiKey" expression="#requestHeaders.getFirst('api-key')"/>
     </int-http:inbound-gateway>
 
 

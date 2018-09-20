@@ -19,6 +19,12 @@ public class ShopEndPoint {
     public Message<?> list(Message<String> msg) {
     	
     	Integer mallId = Integer.valueOf(msg.getPayload());
+    	String apiKey = (String)msg.getHeaders().get("apiKey");
+    	
+    	if (apiKey != null && !apiKey.isEmpty()) {
+    		System.out.println(apiKey);
+    	}
+    	
     	List<Shop> shopList = shopService.getActiveShopListByMallId(mallId);
     	    	  		
     	ShopList result = new ShopList(shopList);
