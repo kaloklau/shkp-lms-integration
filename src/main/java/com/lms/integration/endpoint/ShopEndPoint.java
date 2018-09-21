@@ -1,5 +1,6 @@
 package com.lms.integration.endpoint;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import com.lms.integration.service.*;
 public class ShopEndPoint {
 
 	private static final String STATUSCODE_HEADER = "http_statusCode";
+	private String secretKey;
     private ShopService shopService;
 
     public Message<?> list(Message<String> msg) {
@@ -21,17 +23,25 @@ public class ShopEndPoint {
     	Integer mallId = Integer.valueOf(msg.getPayload());
     	String apiKey = (String)msg.getHeaders().get("apiKey");
     	
-    	if (apiKey != null && !apiKey.isEmpty()) {
-    		System.out.println(apiKey);
-    	}
-    	
-    	List<Shop> shopList = shopService.getActiveShopListByMallId(mallId);
+    	if (apiKey != null && !apiKey.isEmpty() && apiKey.equals(secretKey)) {
+    		    	    
+    		List<Shop> shopList = shopService.getActiveShopListByMallId(mallId);
     	    	  		
-    	ShopList result = new ShopList(shopList);
-    	return MessageBuilder.withPayload(result)
-    			.copyHeadersIfAbsent(msg.getHeaders())
-    			.setHeader(STATUSCODE_HEADER, HttpStatus.OK)
-    			.build();    		           
+    		ShopList result = new ShopList(shopList);
+    		return MessageBuilder.withPayload(result)
+    				.copyHeadersIfAbsent(msg.getHeaders())
+    				.setHeader(STATUSCODE_HEADER, HttpStatus.OK)
+    				.build();
+    	}
+    	else {
+    		List<Shop> errorShopList = new ArrayList<Shop>();
+    		errorShopList.add(new Shop(-1, "", "", "", "", "Mis-match found in api-key."));
+    		ShopList errorResult = new ShopList(errorShopList);
+    		return MessageBuilder.withPayload(errorResult)
+        			.copyHeadersIfAbsent(msg.getHeaders())
+        			.setHeader(STATUSCODE_HEADER, HttpStatus.OK)
+        			.build();
+    	}
     }
     
     public void setShopService(ShopService shopService) {
@@ -41,4 +51,10 @@ public class ShopEndPoint {
     public ShopService getShopService() {
     	return shopService;
     }
+    
+    public void setSecretKey(String secretKey) {
+    	this.secretKey = secretKey;
+    }
+    
+    
 }
